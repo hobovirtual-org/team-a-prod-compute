@@ -11,13 +11,6 @@ terraform {
   }
 }
 
-provider "aws" {
-  access_key  = var.AWS_ACCESS_KEY_ID
-  secret_key  = var.AWS_SECRET_ACCESS_KEY
-  token       = var.AWS_SESSION_TOKEN  
-  region      = var.REGION
-}
-
 data "doormat_aws_credentials" "creds" {
   provider = doormat
 
@@ -27,5 +20,6 @@ data "doormat_aws_credentials" "creds" {
 provider "aws" {
   access_key = data.doormat_aws_credentials.creds.access_key
   secret_key = data.doormat_aws_credentials.creds.secret_key
-  token      = data.doormat_aws_credentials.creds.token
+  token      = data.doormat_aws_credentials.creds.token  
+  region     = var.REGION
 }
