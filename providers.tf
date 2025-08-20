@@ -13,6 +13,6 @@ provider "aws" {
   # token       = var.AWS_SESSION_TOKEN  
   region      = var.REGION
   assume_role {
-    role_arn = "arn:aws:iam::602343948585:role/tfc-hashicorp-wwtfo-demo-platform-prod-hc-christian-renaud-role"
+    role_arn = "arn:aws:iam::397512762488:user/doormatServiceUser"
   }
 }
