@@ -13,6 +13,6 @@ provider "aws" {
   # token       = var.AWS_SESSION_TOKEN  
   region      = var.REGION
   assume_role {
-    role_arn = "arn:aws:iam::602343948585:role/aws_christian.renaud_test-developer"
+    role_arn = "arn:aws:iam::602343948585:role/aws_christian.renaud_test-admin"
   }
 }
