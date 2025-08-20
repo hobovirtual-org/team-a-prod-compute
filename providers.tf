@@ -13,8 +13,7 @@ terraform {
 
 data "doormat_aws_credentials" "creds" {
   provider = doormat
-
-  role_arn = "arn:aws:iam::602343948585:role/sample_dev-custom_role"
+  role_arn = var.DOORMAT_ROLE_ARN
 }
 
 provider "aws" {
